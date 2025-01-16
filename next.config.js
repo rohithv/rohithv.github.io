@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/repo-name',
+  basePath: '',
   images: {
     unoptimized: true,
   },
