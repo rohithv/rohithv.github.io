@@ -1,5 +1,7 @@
 'use client'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useState } from 'react'
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
 
 type RichTextItem = {
   text: string
@@ -46,6 +48,8 @@ function TimelineItem({
   description: RichText
   highlights?: RichText[]
 }) {
+  const [isExpanded, setIsExpanded] = useState(false)
+
   return (
     <div className="relative pl-6 lg:pl-8 border-l border-gray-600">
       <span className="absolute left-0 -translate-x-1/2 w-3 h-3 lg:w-4 lg:h-4 rounded-full bg-blue-500" />
@@ -63,13 +67,35 @@ function TimelineItem({
         <RichTextDisplay content={description} />
       </p>
       {highlights && (
-        <ul className="text-xs lg:text-sm text-gray-400 list-disc list-inside space-y-1">
-          {highlights.map((highlight, index) => (
-            <li key={index}>
-              <RichTextDisplay content={highlight} />
-            </li>
-          ))}
-        </ul>
+        <>
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="text-xs lg:text-sm text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-1"
+          >
+            {isExpanded ? (
+              <>Hide Experience <FaChevronUp className="w-3 h-3" /></>
+            ) : (
+              <>View Experience <FaChevronDown className="w-3 h-3" /></>
+            )}
+          </button>
+          <AnimatePresence>
+            {isExpanded && (
+              <motion.ul
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}
+                className="text-xs lg:text-sm text-gray-400 list-disc list-inside space-y-1 mt-2 overflow-hidden"
+              >
+                {highlights.map((highlight, index) => (
+                  <li key={index}>
+                    <RichTextDisplay content={highlight} />
+                  </li>
+                ))}
+              </motion.ul>
+            )}
+          </AnimatePresence>
+        </>
       )}
     </div>
   )
