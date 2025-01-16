@@ -10,7 +10,8 @@ export default function Navigation() {
   const navLinks = [
     { href: "/about", label: "About" },
     { href: "/thoughts", label: "Thoughts" },
-    { href: "/projects", label: "Projects & Research" },
+    { href: "/projects", label: "Portfolio" },
+    { href: "/papershelf", label: "Papers" },
     { href: "/contact", label: "Contact" },
   ]
 
@@ -21,7 +22,7 @@ export default function Navigation() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <Link href="/" className="text-xl font-bold">
-              YN
+              RV
             </Link>
             
             <div className="hidden md:flex space-x-8">
