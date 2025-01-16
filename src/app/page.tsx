@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaArrowRight } from 'react-icons/fa'
+import TypeWriter from '@/components/TypeWriter'
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
         transition={{ duration: 0.8 }}
         className="container mx-auto px-4 py-16 md:py-32"
       >
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Hero Section */}
           <div className="flex flex-col md:flex-row items-center gap-8 mb-16">
             {/* Photo */}
@@ -25,8 +26,8 @@ export default function Home() {
             >
               <div className="rounded-full overflow-hidden border-4 border-blue-500 shadow-lg relative w-full h-full">
                 <Image
-                  src="/profile-pic-dummy.jpg"
-                  alt="Your Name"
+                  src="/rohith-1.jpeg"
+                  alt="Rohith Vishnumolakala"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 160px, 192px"
@@ -43,8 +44,12 @@ export default function Home() {
               transition={{ delay: 0.3 }}
               className="text-center md:text-left"
             >
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                Hello, I'm [Your Name]
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+                <TypeWriter 
+                  text="Hello, I'm Rohith Vishnumolakala"
+                  delay={0.05}
+                  highlightStart={10}
+                />
               </h1>
               <p className="text-xl text-gray-300 mb-6">
                 Exploring the intersection of research and engineering
@@ -82,7 +87,7 @@ export default function Home() {
                   Explore my latest work in research and software development
                 </p>
                 <span className="text-blue-400 group-hover:text-blue-300 transition-colors">
-                  View Projects →
+                  View Portfolio →
                 </span>
               </div>
             </Link>

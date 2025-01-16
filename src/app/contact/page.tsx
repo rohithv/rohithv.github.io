@@ -7,19 +7,19 @@ export default function Contact() {
     {
       icon: FaLinkedin,
       label: "LinkedIn",
-      href: "https://linkedin.com/in/[your-profile]",
+      href: "https://www.linkedin.com/in/rohithvishnumolakala/",
       description: "Connect with me professionally"
     },
     {
       icon: FaGithub,
       label: "GitHub",
-      href: "https://github.com/[your-username]",
-      description: "Check out my code and projects"
+      href: "https://github.com/rohithv",
+      description: "Check out my code and projects (Active ones are private)"
     },
     {
       icon: FaEnvelope,
       label: "Email",
-      href: "mailto:[your-email]",
+      href: "mailto:rohithvishnumolakala@gmail.com",
       description: "Get in touch directly"
     }
   ]
@@ -71,7 +71,7 @@ export default function Contact() {
               or just having a conversation about technology and research.
             </p>
             <p>
-              Based in [Your Location]
+              Based in New Delhi, India
             </p>
           </motion.div>
         </div>
