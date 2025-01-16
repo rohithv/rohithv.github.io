@@ -68,7 +68,8 @@ export default function Contact() {
           >
             <p className="mb-4">
               I'm always open to discussing new opportunities, collaborations, 
-              or just having a conversation about technology and research.
+              or just having a conversation about technology, research or 
+              computer science in general.
             </p>
             <p>
               Based in New Delhi, India
