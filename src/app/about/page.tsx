@@ -18,7 +18,7 @@ export default function About() {
           animate={{ y: 0 }}
           className="text-4xl font-bold mb-12"
         >
-          About Me
+          Who am I?
         </motion.h1>
 
         <div className="space-y-12">

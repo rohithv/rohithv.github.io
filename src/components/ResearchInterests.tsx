@@ -4,12 +4,16 @@ import { motion } from 'framer-motion'
 export default function ResearchInterests() {
   const interests = [
     {
-      title: "Machine Learning",
-      description: "Deep learning, neural networks, and their applications"
+      title: "Cloud Computing",
+      description: "Serverless Computing, Confidential Computing"
     },
     {
       title: "Distributed Systems",
-      description: "Scalable and reliable system design"
+      description: "Scalable and reliable systems, Microservices"
+    },
+    {
+      title: "Operating Systems",
+      description: "Virtualization, Containerization, Unikernels"
     },
     // Add more interests
   ]
