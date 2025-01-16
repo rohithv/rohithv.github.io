@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useState } from 'react'
+import { HiMenu, HiX } from 'react-icons/hi'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -32,10 +33,10 @@ export default function Navigation() {
             </div>
 
             <button 
-              className="md:hidden"
+              className="md:hidden p-2"
               onClick={() => setIsOpen(!isOpen)}
             >
-              Menu
+              {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
             </button>
           </div>
         </div>
@@ -49,7 +50,11 @@ export default function Navigation() {
           >
             <div className="px-4 py-2">
               {navLinks.map(link => (
-                <NavLink key={link.href} href={link.href}>
+                <NavLink 
+                  key={link.href} 
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                >
                   {link.label}
                 </NavLink>
               ))}
@@ -61,11 +66,20 @@ export default function Navigation() {
   )
 }
 
-function NavLink({ href, children }: { href: string, children: React.ReactNode }) {
+function NavLink({ 
+  href, 
+  children, 
+  onClick 
+}: { 
+  href: string
+  children: React.ReactNode
+  onClick?: () => void 
+}) {
   return (
     <Link 
       href={href}
       className="block py-2 hover:text-blue-400 transition-colors"
+      onClick={onClick}
     >
       {children}
     </Link>
