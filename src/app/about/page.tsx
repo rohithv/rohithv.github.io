@@ -25,7 +25,7 @@ export default function About() {
           {/* About and Journey in first row */}
           <section className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <AboutMe />
-            <Journey showAbout={false} />
+            <Journey />
           </section>
 
           {/* Research interests below */}
