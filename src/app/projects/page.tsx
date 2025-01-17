@@ -15,6 +15,7 @@ type Project = {
     paper?: string
     demo?: string
     github?: string
+    project?: string
   }
   highlights: string[]
   order: number
@@ -28,123 +29,166 @@ export default function Projects() {
 
   const projects: Project[] = [
     {
-      title: "ML-Powered Code Analysis",
-      description: "A hybrid solution combining machine learning with practical software engineering to analyze code quality and predict potential bugs.",
-      types: ["research", "project"],
-      order: 1,
-      technologies: [
-        { name: "Python", useIcon: true },
-        { name: "TensorFlow", useIcon: true },
-        { name: "Docker", useIcon: true },
-        { name: "FastAPI", useIcon: true },
-        { name: "PostgreSQL", useIcon: true }
-      ],
-      links: {
-        paper: "https://paper-link.com",
-        demo: "https://demo-link.com",
-        github: "https://github.com/..."
-      },
-      highlights: [
-        "Published in International Conference on Software Engineering",
-        "Processes 1M+ lines of code daily",
-        "Achieved 85% accuracy in bug prediction",
-        "Deployed in production at 3 companies"
-      ],
-      date: "2024-03"
+        title: "OS-less Virtual Machines for Serverless Applications",
+        description: "Introducing OS-less virtual machines to eliminate cold-start latency by removing redundant OS components and snapshotting",
+        types: ["research"],
+        order: 1,
+        technologies: [
+            { name: "Rust", useIcon: true },
+            { name: "TDX", useIcon: false },
+          ],
+        links: {},
+        highlights: [
+            "Improved resource efficiency",
+            "Reduced cold-start latency",
+            "Strong security boundaries",
+        ],
+        date: "2025-01"
     },
     {
-      title: "Distributed Systems Research",
-      description: "Novel approach to consensus algorithms in distributed systems, focusing on reducing latency while maintaining consistency.",
-      types: ["research"],
-      order: 2,
-      technologies: [
-        { name: "Rust", useIcon: true },
-        { name: "Go", useIcon: true },
-        { name: "Kubernetes", useIcon: true },
-        { name: "Custom Consensus Protocol" }
-      ],
-      links: {
-        paper: "https://paper-link.com",
-        github: "https://github.com/..."
-      },
-      highlights: [
-        "Published in SOSP 2023",
-        "50% reduction in consensus latency",
-        "Implemented proof-of-concept in Rust",
-        "Extended Raft protocol"
-      ],
-      date: "2024-02"
+        title: "Energy-Efficient Serverless Computing at the Edge",
+        description: "Explored energy-efficient serverless computing at the edge, optimizing resource use, and enhancing sustainability and performance of edge systems",
+        types: ["research"],
+        order: 2,
+        technologies: [
+            { name: "Rust", useIcon: true },
+            { name: "Docker", useIcon: true },
+            { name: "Kubernetes", useIcon: true },
+            { name: "Python", useIcon: true },
+          ],
+        links: {},
+        highlights: [
+            "Characterized energy consumption of edge computing systems",
+            "A novel energy-efficient serverless computing framework"
+        ],
+        date: "2024-10"
     },
     {
-      title: "Cloud-Native Analytics Platform",
-      description: "Enterprise-grade analytics platform built with modern cloud technologies, handling real-time data processing at scale.",
-      types: ["project"],
-      order: 3,
-      technologies: [
-        { name: "React", useIcon: true },
-        { name: "Node.js", useIcon: true },
-        { name: "TypeScript", useIcon: true },
-        { name: "AWS", useIcon: true },
-        { name: "MongoDB", useIcon: true }
-      ],
-      links: {
-        demo: "https://demo-link.com",
-        github: "https://github.com/..."
-      },
-      highlights: [
-        "Processes 1TB+ data daily",
-        "Serves 100K+ active users",
-        "99.99% uptime SLA",
-        "Reduced infrastructure costs by 40%"
-      ],
-      date: "2024-01"
+        title: "RedBlue Key-Value Store",
+        description: "Implemented a Redis-like key-value store with RedBlue consistency, featuring dynamic consistency levels and cluster-based replication.",
+        types: ["research", "project"],
+        order: 3,
+        technologies: [
+            { name: "Go", useIcon: true },
+            { name: "Redis", useIcon: true },
+            { name: "Python", useIcon: true },
+            { name: "Docker", useIcon: true },
+        ],
+        links: {
+            paper: "https://paper-link.com",
+            github: "https://github.com/satyamjay-iitd/red-blue-consistency"
+        },
+        highlights: [
+            "Up to 8x performance improvement over Redis",
+            "Dynamic consistency levels at runtime",
+            "Active-active replication",
+        ],
+        date: "2023-11"
     },
     {
-      title: "Quantum Algorithm Optimization",
-      description: "Research focused on optimizing quantum algorithms for NISQ-era quantum computers, with practical implementations.",
-      types: ["research", "project"],
-      order: 4,
-      technologies: [
-        { name: "Python", useIcon: true },
-        { name: "Qiskit", useIcon: true },
-        { name: "Julia", useIcon: true },
-        { name: "Quantum Circuits" }
-      ],
-      links: {
-        paper: "https://paper-link.com",
-        github: "https://github.com/..."
-      },
-      highlights: [
-        "Published in Quantum Information Processing",
-        "2x improvement in circuit depth",
-        "Implemented on IBM Quantum computers",
-        "Novel error mitigation technique"
-      ],
-      date: "2023-12"
+        title: "EVMonitor: Ensuring ethical EV charging",
+        description: "A low-cost device with camera-based monitoring and edge analytics to detect misuse of subsidized private EV charging stations without altering existing power meters.",
+        types: ["project"],
+        order: 3,
+        technologies: [
+            { name: "Python", useIcon: true },
+            { name: "OpenCV", useIcon: true },
+            { name: "Jupyter", useIcon: true }
+        ],
+        links: {},
+        highlights: [
+            "Computer vision based meter reading detection",
+            "Edge analytics to detect misuse",
+            "Low-cost embedded device",
+            "Edge-cloud continuum based solution",
+        ],
+        date: "2024-11"
     },
     {
-      title: "DevOps Automation Suite",
-      description: "Comprehensive DevOps toolchain that automates deployment pipelines and infrastructure management.",
-      types: ["project"],
-      order: 5,
-      technologies: [
-        { name: "Python", useIcon: true },
-        { name: "Docker", useIcon: true },
-        { name: "Kubernetes", useIcon: true },
-        { name: "Terraform", useIcon: true },
-        { name: "AWS", useIcon: true }
-      ],
-      links: {
-        github: "https://github.com/...",
-        demo: "https://demo-link.com"
-      },
-      highlights: [
-        "Reduced deployment time by 80%",
-        "Automated 95% of infrastructure tasks",
-        "Used by 20+ development teams",
-        "Integrated with major CI/CD platforms"
-      ],
-      date: "2023-11"
+        title: "Cache Timing Attacks",
+        description: "Analyzed cache timing attacks on DNS and favicon caching in modern web browsers assessing privacy risks",
+        types: ["research", "project"],
+        order: 4,
+        technologies: [
+            { name: "Python", useIcon: true },
+            { name: "Selenium", useIcon: true },
+            { name: "Chrome", useIcon: true },
+            { name: "Sklearn", useIcon: true },
+        ],
+        links: {
+            github: "https://github.com/manishmalik/SIL765-Project"
+        },
+        highlights: [
+            "Developed a classification based machine learning model.",
+            "Able to predict the history of the browser with 71% accuracy.",
+        ],
+        date: "2023-04"
+    },
+    {
+        title: "NITCbase",
+        description: "Ideated and developed a single-user Relational Database Management System for educational purposes",
+        types: ["project"],
+        order: 5,
+        technologies: [
+            { name: "C++", useIcon: true },
+            { name: "C", useIcon: true },
+            { name: "Bash", useIcon: true },
+        ],
+        links: {
+            github: "https://github.com/NITCbase",
+            project: "https://nitcbase.github.io/"
+        },
+        highlights: [
+            "Used in NIT Calicut’s systems lab by 50 students per semester",
+            "Processes SQL-like queries via CLI using relational algebra and index structures",
+        ],
+        date: "2019-04"
+    },
+    {
+        title: "PTP Troubleshooter",
+        description: "Developed a tool to troubleshoot PTP (Precision Time Protocol) issues in network devices",
+        types: ["project"],
+        order: 6,
+        technologies: [
+            { name: "Python", useIcon: true },
+            { name: "Docker", useIcon: true },
+            { name: "Elasticsearch", useIcon: true },
+            { name: "Logstash", useIcon: true },
+            { name: "Kibana", useIcon: true },
+        ],
+        links: {},
+        highlights: [
+            "Collects PTP corrections data from switches, storing in a time series database",
+            "Visualises PTP peers across the fabric",
+            "Highlights switches exceeding threshold",
+        ],
+        date: "2018-06"
+    },
+    {
+        title: "MazingDay",
+        description: "Led the technical design and development of the core activity recommendation algorithm",
+        types: ["project"],
+        order: 3,
+        technologies: [
+            { name: "Python", useIcon: true },
+            { name: "Go", useIcon: true },
+            { name: "Docker", useIcon: true },
+            { name: "Kubernetes", useIcon: true },
+            { name: "MongoDB", useIcon: true },
+            { name: "GCP", useIcon: true },
+            { name: "OpenAI", useIcon: true },
+            { name: "GraphQL", useIcon: true },
+        ],
+        links: {
+            project: "https://www.mazingday.com/"
+        },
+        highlights: [
+            "Achieved a 3x speedup by migrating to Go",
+            "Transitioned to GCP and serverless MongoDB to improve response time by 15x",
+            "Reduced the overall cost by 80%",
+            "AI-driven platform for automated image matching",
+        ],
+        date: "2023-05"
     }
   ]
 
@@ -349,6 +393,17 @@ export default function Projects() {
                              hover:text-blue-300 transition-colors"
                   >
                     <FaExternalLinkAlt className="w-4 h-4" /> Live Demo
+                  </a>
+                )}
+                {project.links.project && (
+                  <a
+                    href={project.links.project}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm text-blue-400 
+                             hover:text-blue-300 transition-colors"
+                  >
+                    <FaExternalLinkAlt className="w-4 h-4" /> View Project
                   </a>
                 )}
                 {project.links.paper && (
