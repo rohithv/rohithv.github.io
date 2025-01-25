@@ -45,16 +45,16 @@ export default function PaperShelf() {
       ]
     },
     {
-      name: "Machine Learning Systems",
-      description: "Papers about ML infrastructure, scaling ML, and ML systems design",
+      name: "Serverless Computing",
+      description: "Papers about Serverless computing aka Function-As-S-Service(FAAS)",
       papers: [
         {
-          title: "Hidden Technical Debt in Machine Learning Systems",
-          authors: "D. Sculley et al.",
-          conference: "NeurIPS",
-          year: 2015,
-          link: "https://papers.nips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf",
-          tags: ["ml-systems", "technical-debt", "production-ml"]
+          title: "On-demand Container Loading in AWS Lambda",
+          authors: "Marc Brooker, Mike Danilov, Chris Greenwood, and Phil Piwonka",
+          conference: "USENIX ATC",
+          year: 2023,
+          link: "https://www.usenix.org/conference/atc23/presentation/brooker",
+          tags: ["serverless", "aws-lambda"]
         },
         // Add more papers...
       ]
