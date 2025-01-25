@@ -35,6 +35,14 @@ export default function PaperShelf() {
           tags: ["consensus", "distributed-systems", "raft"]
         },
         {
+          title: "MapReduce: simplified data processing on large clusters",
+          authors: "Jeffrey Dean and Sanjay Ghemawat",
+          conference: "OSDI",
+          year: 2004,
+          link: "https://www.usenix.org/legacy/events/osdi04/tech/full_papers/dean/dean.pdf",
+          tags: []
+        },
+        {
             title: "Dummy Paper",
             authors: "Dummy Author",
             year: 2025,
