@@ -43,13 +43,104 @@ export default function PaperShelf() {
           tags: []
         },
         {
-            title: "Dummy Paper",
-            authors: "Dummy Author",
-            year: 2025,
-            link: "https://dummy.com",
-            tags: []
+          title: "The Google File System",
+          authors: "Sanjay Ghemawat, Howard Gobioff, and Shun-Tak Leung",
+          conference: "SOSP",
+          year: 2003,
+          link: "https://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf",
+          notes: "Foundational paper describing GFS - Google's distributed file system",
+          tags: ["distributed-systems", "storage", "google"]
+        },
+        {
+          title: "Dynamo: Amazon's Highly Available Key-value Store",
+          authors: "Giuseppe DeCandia, et al.",
+          conference: "SOSP",
+          year: 2007,
+          link: "https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf",
+          notes: "Introduces the concept of eventual consistency and influenced many NoSQL databases",
+          tags: ["distributed-systems", "databases", "amazon"]
+        },
+        {
+          title: "ZooKeeper: Wait-free coordination for Internet-scale systems",
+          authors: "Patrick Hunt, Mahadev Konar, Flavio P. Junqueira, and Benjamin Reed",
+          conference: "USENIX ATC",
+          year: 2010,
+          link: "https://www.usenix.org/legacy/event/atc10/tech/full_papers/Hunt.pdf",
+          notes: "Describes the coordination service used by many distributed systems",
+          tags: ["distributed-systems", "coordination"]
+        },
+        {
+          title: "Spanner: Google's Globally-Distributed Database",
+          authors: "James C. Corbett, et al.",
+          conference: "OSDI",
+          year: 2012,
+          link: "https://static.googleusercontent.com/media/research.google.com/en//archive/spanner-osdi2012.pdf",
+          notes: "First globally-distributed database with external consistency guarantees",
+          tags: ["distributed-systems", "databases", "google"]
+        },
+        {
+          title: "CRAQ: Chain Replication with Apportioned Queries",
+          authors: "Jeff Terrace and Michael J. Freedman",
+          conference: "USENIX ATC",
+          year: 2009,
+          link: "https://www.usenix.org/legacy/event/usenix09/tech/full_papers/terrace/terrace.pdf",
+          notes: "Extends chain replication with apportioned queries for improved read throughput while maintaining strong consistency",
+          tags: ["distributed-systems", "replication", "consistency"]
+        },
+        {
+          title: "Finding a needle in Haystack: Facebook's photo storage",
+          authors: "Doug Beaver, Sanjeev Kumar, Harry C. Li, Jason Sobel, Peter Vajgel",
+          conference: "OSDI",
+          year: 2010,
+          link: "https://www.usenix.org/legacy/event/osdi10/tech/full_papers/Beaver.pdf",
+          notes: "Describes Facebook's efficient photo storage system that handles billions of uploads",
+          tags: ["distributed-systems", "storage", "facebook"]
+        },
+        {
+          title: "Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing",
+          authors: "Matei Zaharia, Mosharaf Chowdhury, Tathagata Das, Ankur Dave, Justin Ma, Murphy McCauley, Michael J. Franklin, Scott Shenker, Ion Stoica",
+          conference: "NSDI",
+          year: 2012,
+          link: "https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final138.pdf",
+          notes: "Introduces RDDs (Resilient Distributed Datasets) - the core abstraction in Apache Spark that enables efficient fault-tolerant distributed computation",
+          tags: ["distributed-systems", "big-data", "apache-spark", "fault-tolerance"]
+        },
+        {
+          title: "Discretized Streams: Fault-Tolerant Streaming Computation at Scale",
+          authors: "Matei Zaharia, Tathagata Das, Haoyuan Li, Timothy Hunter, Scott Shenker, Ion Stoica",
+          conference: "SOSP",
+          year: 2013,
+          link: "https://people.csail.mit.edu/matei/papers/2013/sosp_spark_streaming.pdf",
+          notes: "Introduces Spark Streaming's micro-batch architecture for scalable stream processing",
+          tags: ["distributed-systems", "stream-processing", "apache-spark", "fault-tolerance"]
+        },
+        {
+          title: "TensorFlow: A System for Large-Scale Machine Learning",
+          authors: "Martín Abadi, Paul Barham, Jianmin Chen, Zhifeng Chen, Andy Davis, Jeffrey Dean, et al.",
+          conference: "OSDI",
+          year: 2016,
+          link: "https://www.usenix.org/system/files/conference/osdi16/osdi16-abadi.pdf",
+          notes: "Describes the architecture and implementation of TensorFlow, Google's distributed system for training and serving machine learning models",
+          tags: ["distributed-systems", "machine-learning", "google", "tensorflow"]
+        },
+        {
+          title: "Ray: A Distributed Framework for Emerging AI Applications",
+          authors: "Philipp Moritz, Robert Nishihara, Stephanie Wang, Alexey Tumanov, Richard Liaw, Eric Liang, et al.",
+          conference: "OSDI",
+          year: 2018,
+          link: "https://www.usenix.org/system/files/osdi18-moritz.pdf",
+          notes: "Introduces Ray, a distributed system designed for emerging AI applications requiring flexible distributed computation",
+          tags: ["distributed-systems", "machine-learning", "ray", "reinforcement-learning"]
+        },
+        {
+          title: "A comprehensive study of Convergent and Commutative Replicated Data Types",
+          authors: "Marc Shapiro, Nuno Preguiça, Carlos Baquero, Marek Zawirski",
+          conference: "INRIA TR",
+          year: 2011,
+          link: "https://hal.inria.fr/inria-00555588/document",
+          notes: "Introduces CRDTs (Conflict-free Replicated Data Types) that guarantee eventual consistency in distributed systems without coordination",
+          tags: ["distributed-systems", "crdt", "consistency", "replication"]
         }
-        // Add more papers...
       ]
     },
     {
@@ -63,6 +154,15 @@ export default function PaperShelf() {
           year: 2023,
           link: "https://www.usenix.org/conference/atc23/presentation/brooker",
           tags: ["serverless", "aws-lambda"]
+        },
+        {
+          title: "Firecracker: Lightweight Virtualization for Serverless Applications",
+          authors: "Alexandru Agache, Marc Brooker, Andreea Florescu, et al.",
+          conference: "NSDI",
+          year: 2020,
+          link: "https://www.usenix.org/system/files/nsdi20-paper-agache.pdf",
+          notes: "Describes AWS's innovative microVM technology that powers Lambda and Fargate, focusing on fast startup times and security isolation",
+          tags: ["serverless", "virtualization", "aws", "microvm"]
         },
         // Add more papers...
       ]
@@ -163,4 +263,4 @@ export default function PaperShelf() {
       </motion.div>
     </div>
   )
-} 
+}
