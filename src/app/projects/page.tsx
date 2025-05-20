@@ -29,13 +29,15 @@ export default function Projects() {
 
   const projects: Project[] = [
     {
-        title: "OS-less Virtual Machines for Serverless Applications",
-        description: "Introducing OS-less virtual machines to eliminate cold-start latency by removing redundant OS components and snapshotting",
+        title: "OS-less Virtual Machines for Confidential Serverless Applications",
+        description: "Introducing OS-less virtual machines to eliminate cold-start latency by removing redundant OS components, while maintaining strong security boundaries.",
         types: ["research"],
         order: 1,
         technologies: [
             { name: "Rust", useIcon: true },
             { name: "TDX", useIcon: false },
+            { name: "Linux/KVM", useIcon: false },
+            { name: "rust-VMM", useIcon: false },
           ],
         links: {},
         highlights: [
@@ -43,7 +45,7 @@ export default function Projects() {
             "Reduced cold-start latency",
             "Strong security boundaries",
         ],
-        date: "2025-01"
+        date: "2025-05"
     },
     {
         title: "Energy-Efficient Serverless Computing at the Edge",

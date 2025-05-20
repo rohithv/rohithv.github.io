@@ -19,7 +19,7 @@ export default function AboutMe() {
            intersection of research and engineering.
         </p>
         <p className="text-gray-300 leading-relaxed">
-        As a seasoned senior software engineer with 5+ years of experience, 
+        As a seasoned senior software engineer with ~6 years of experience, 
         I am deeply passionate about crafting elegant solutions within the intricate 
         design of software systems and the broader realm of computer science. 
         While some may refer to it simply as system design, for me, it embodies 
@@ -56,7 +56,10 @@ export default function AboutMe() {
         <div className="mt-6">
             <h3 className="text-xl font-semibold mb-3">Next Steps</h3>
             <p className="text-gray-300 leading-relaxed">
-            Coming soon...
+              I am looking for open opportunities where I can apply my blend of industry experience
+              and research knowledge to tackle challenging problems in system design and cloud computing.
+              I'm interested in roles that allow me to innovate and contribute to cutting-edge solutions
+              in distributed systems and modern computing architectures.
             </p>
         </div>
 
